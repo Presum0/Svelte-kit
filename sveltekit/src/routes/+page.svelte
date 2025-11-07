@@ -1,4 +1,9 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	import type { PageProps } from './$types';
+
+	let { data }: PageProps = $props();
+</script>
+
+<h1>{data.title}</h1>
+<div>{@html data.content}</div>
 <a href="/demo/lucia/login">Login</a>
