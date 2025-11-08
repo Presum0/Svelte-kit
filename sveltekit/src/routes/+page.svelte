@@ -1,9 +1,12 @@
-<script lang="ts">
-	import type { PageProps } from './$types';
+import { error } from '@sveltejs/kit';
+import type { PageServerLoad } from './$types';
 
-	let { data }: PageProps = $props();
-</script>
+export const load: PageServerLoad = async ({ params }) => {
+	const post = await getPostFromDatabase(params.slug);
 
-<h1>{data.title}</h1>
-<div>{@html data.content}</div>
-<a href="/demo/lucia/login">Login</a>
+	if (post) {
+		return post;
+	}
+
+	error(404, 'Not found');
+};
