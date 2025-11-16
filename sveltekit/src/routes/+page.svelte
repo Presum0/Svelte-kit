@@ -120,6 +120,194 @@
   }
 </script>
 
+
+<style>
+  main {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: #fafafa;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  h1 {
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0;
+  }
+
+  .section {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  .btn-primary {
+    background: #4299e1;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: #3182ce;
+  }
+
+  button:not(.btn-primary) {
+    background: #edf2f7;
+    border: 1px solid #e2e8f0;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #4a5568;
+    font-size: 0.9rem;
+  }
+
+  button:not(.btn-primary):hover {
+    background: #e2e8f0;
+  }
+
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  .deck-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #edf2f7;
+  }
+
+  .deck-item:last-child {
+    border-bottom: none;
+  }
+
+  .deck-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .header-row h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2d3748;
+  }
+
+  .card-counter {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #718096;
+  }
+
+  .flashcard {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+  }
+
+  .flashcard:hover {
+    border-color: #cbd5e0;
+    background: #f8fafc;
+  }
+
+  .flashcard > div > div:first-child {
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+  }
+
+  .flashcard p {
+    margin-top: 1.5rem;
+    color: #a0aec0;
+    font-size: 0.9rem;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .add-card {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #edf2f7;
+  }
+
+  .card-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    align-items: flex-start;
+  }
+
+  .card-item > div {
+    flex: 1;
+    margin-right: 1rem;
+  }
+
+  .card-item div > div {
+    margin: 0.25rem 0;
+  }
+</style>
+
+
+
 <main>
   <div class="container">
     <header>
